@@ -1,0 +1,27 @@
+meta {
+  name: Add Note
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/notes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsZWFuZHJhQGV4YW1wbGUuY29tIiwiZXhwIjoxNzYwNDk5NTQzfQ.iZLpqVrhj1YXgVOXi7TId6VaTuKfw0xcEDP01E-bhs8
+}
+
+body:json {
+  {
+    "title": "My First Note",
+    "content": "This is my first note using the Go API!"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

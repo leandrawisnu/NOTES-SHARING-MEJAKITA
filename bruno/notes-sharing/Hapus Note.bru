@@ -1,0 +1,19 @@
+meta {
+  name: Hapus Note
+  type: http
+  seq: 7
+}
+
+delete {
+  url: http://localhost:8080/notes/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsZWFuZHJhQGV4YW1wbGUuY29tIiwiZXhwIjoxNzYwNDA2NTgwfQ.qWrppVFUWQSC9NELY9reKSlHH6W7FVIy5Lc7P2EAoMw
+}
+
+settings {
+  encodeUrl: true
+}
