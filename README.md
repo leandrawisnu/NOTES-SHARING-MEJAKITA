@@ -39,16 +39,14 @@ Buat database PostgreSQL:
 
 bash
 psql -U postgres
-CREATE DATABASE notes;
-CREATE USER zzaa WITH PASSWORD 'notessharingapp';
-GRANT ALL PRIVILEGES ON DATABASE notes TO zzaa;
+CREATE DATABASE notessharing;
 \q
 
 
 Import schema database:
 
 bash
-psql -U zzaa -d notes -f notes.sql
+psql -U postgres -d notes -f notes.sql
 
 
 ### 3. Setup Backend (Go)
