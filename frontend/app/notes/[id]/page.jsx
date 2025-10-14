@@ -119,7 +119,7 @@ export default function NoteDetailPage() {
                         if (confirm('Delete this image?')) {
                           try {
                             await axios.delete(
-                              `localhost/notes/image/${image.ID}`,
+                              `http://localhost:8080/notes/image/${image.ID}`,
                               {
                                 headers: {
                                   Authorization: `Bearer ${localStorage.getItem('token')}`

@@ -35,7 +35,7 @@ export default function NoteForm({ onCreated }) {
           formData.append("note_id", noteId);
 
           await axios.post(
-            `localhost/notes/image`, // disamain dengan backend
+            `http://localhost:8080/notes/image`, // disamain dengan backend
             formData,
             {
               headers: {
