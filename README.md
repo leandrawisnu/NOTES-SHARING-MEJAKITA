@@ -6,7 +6,7 @@ Aplikasi berbagi catatan berbasis web dengan fitur autentikasi, upload gambar, d
 
 ### Backend
 - *Go 1.25.2* - Backend API
-- *GIN * - Web framework
+- *GIN* - Web framework
 - *PostgreSQL 16* - Database
 - *JWT* - Authentication
 - *bcrypt* - Password hashing
