@@ -135,6 +135,9 @@ NEXT_PUBLIC_API_URL=http://localhost:8080
 ### Halaman Notes
 ![Notes Page](./screenshots/notes.png)
 
+### Halaman Isi Note
+![Notes Page](./screenshots/notesdetail.png)
+
 ## API Endpoints
 
 ### Authentication
@@ -147,7 +150,7 @@ GET    /notes/:id                --> Ambil catatan
 POST   /notes                    --> Tambah Catatan (perlu JWT)
 POST   /notes/image              --> Tambah Gambar (perlu JWT)
 DELETE /notes/image/:id          --> Hapus Gambar (perlu JWT)
-PUT    /notes/:id                --> Edit Catatan (perlu JWT)
+PUT    /notes/:id                --> Edit Catatan (perl  u JWT)
 DELETE /notes/:id                --> Hapus Catatan (perlu JWT
 
 ## Acknowledgments
