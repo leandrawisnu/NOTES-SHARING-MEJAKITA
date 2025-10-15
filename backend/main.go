@@ -143,7 +143,7 @@ func LogRequestResponse(c *gin.Context, code int, response interface{}) {
 }
 
 func main() {
-	dsn := "host=localhost user=postgres password=leandra dbname=notessharing port=5432 sslmode=disable TimeZone=Asia/Jakarta"
+	dsn := "host=db user=postgres password=leandra dbname=notessharing port=5432 sslmode=disable TimeZone=Asia/Jakarta"
 	var err error
 
 	// Retry connection biar gak panik kalau DB belum ready
