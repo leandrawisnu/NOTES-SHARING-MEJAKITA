@@ -143,7 +143,7 @@ func LogRequestResponse(c *gin.Context, code int, response interface{}) {
 }
 
 func main() {
-	dsn := "host=db user=postgres password=leandra dbname=notessharing port=5432 sslmode=disable TimeZone=Asia/Jakarta"
+	dsn := "host=localhost user=postgres password=leandra dbname=notessharing port=5432 sslmode=disable TimeZone=Asia/Jakarta"
 	var err error
 
 	// Retry connection biar gak panik kalau DB belum ready
@@ -259,15 +259,19 @@ func main() {
 			return
 		}
 
+		// Buat folder upload kalau belum ada
+		uploadDir := "../frontend/public/uploads"
+		os.MkdirAll(uploadDir, os.ModePerm)
+
 		filename := fmt.Sprintf("%d_%s", time.Now().Unix(), file.Filename)
-		filePath := fmt.Sprintf("../frontend/public/uploads/%s", filename)
+		filePath := fmt.Sprintf("%s/%s", uploadDir, filename)
 
 		if err := c.SaveUploadedFile(file, filePath); err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to save file"})
 			return
 		}
 
-		fileURL := fmt.Sprintf("%s/uploads/%s", "http://frontend:3000", filename)
+		fileURL := fmt.Sprintf("%s/uploads/%s", "http://localhost:3000", filename)
 
 		// simpan ke database
 		var image Image

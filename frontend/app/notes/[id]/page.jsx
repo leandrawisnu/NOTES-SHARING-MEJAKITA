@@ -14,7 +14,7 @@ export default function NoteDetailPage() {
     const fetchNote = async () => {
       try {
         const res = await axios.get(
-          `localhost/notes/${id}`
+          `http://localhost:8080/notes/${id}`
         );
         setNote(res.data.note);
       } catch (err) {
