@@ -42,13 +42,6 @@ psql -U postgres
 CREATE DATABASE notessharing;
 \q
 
-
-Import schema database:
-
-bash
-psql -U postgres -d notes -f notes.sql
-
-
 ### 3. Setup Backend (Go)
 
 bash
@@ -59,19 +52,18 @@ go mod download
 go run main.go
 
 
-Server akan berjalan di http://localhost:8081
+Server akan berjalan di http://localhost:8080
 
 ### 4. Setup Frontend (Next.js)
 
 bash
-cd front-end
+cd frontend
 
 # Install dependencies
 npm install
 
 # Jalankan development server
 npm run dev
-
 
 Frontend akan berjalan di http://localhost:3000
 
@@ -124,7 +116,6 @@ JWT_SECRET=keripiktempe
 # Server Configuration
 PORT=8080
 
-
 ### Frontend (.env.local di folder front-end)
 
 env
@@ -142,14 +133,8 @@ NEXT_PUBLIC_API_URL=http://localhost:8080
 ### Halaman Register
 ![Register Page](./screenshots/register.png)
 
-### Dashboard
-![Dashboard](./screenshots/dashboard.png)
-
 ### Halaman Notes
 ![Notes Page](./screenshots/notes.png)
-
-### My Notes
-![My Notes](./screenshots/mynotes.png)
 
 ## API Endpoints
 
