@@ -86,7 +86,7 @@ docker-compose up -d --build
 
 Services yang akan berjalan:
 - *PostgreSQL*: localhost:5432
-- *Backend API*: http://localhost:8081
+- *Backend API*: http://localhost:8080
 - *Frontend*: http://localhost:3000
 
 ### Stop Services
@@ -104,7 +104,6 @@ docker-compose down -v
 
 env
 # Database Configuration
-DB_HOST=localhost
 DB_USER=postgres
 DB_PASSWORD=leandra
 DB_NAME=notessharing
